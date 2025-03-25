@@ -16,22 +16,22 @@ while True:
         descripcion = input("Ingrese la descripción del helado: ")
         precioo = input("Ingrese el precio del helado: ")
         
-    if precioo.isdigit():
-            precio = float(precio)  # Error: variable mal escrita
+        if precioo.isdigit():
+            precio = float(precioo)  # Error: variable mal escrita
             heladoo = {"id": contadore_id, "nombre": nombre, "descripcion": descripcion, "precio": precio}
-            heladoos.append(haledo)  # Error: variable mal escrita
+            heladoos.append(heladoo)  # Error: variable mal escrita
             contadore_id += 1
             print("Helado agregado correctamente.")
-                    else:
+        else:
             print("Error: El precio debe ser un número.")
     
     elif opcion == "2":  # Ver lista de helados
-        if len(helados) == 0:  # Error: variable incorrecta
+        if len(heladoo) == 0:  # Error: variable incorrecta
             print("No hay helados registrados.")
         else:
             print("\nLista de Helados:")
             for helado in heladoos:
-                print("ID: {helado['iD']}, Nombre: {helado['nombre']}, Descripción: {helado['descripsion']}, Precio: ${helado['precio']}")  # Error en claves del diccionario
+             (f"ID: {helado['id']}, Nombre: {helado['nombre']}, Descripción: {helado['descripcion']}, Precio: ${helado['precio']}") # Error en claves del diccionario
     
     elif opcion == "3":  # Modificar un helado
         id_modificar = input("Ingrese el ID del helado a modificar: ")
@@ -41,8 +41,8 @@ while True:
             encontrado = False
             
             for helado in heladoos:
-            if helado["id"] == id_modificar:
-                    nuevo_nombre == input("Nuevo nombre (deje en blanco para no cambiar): ")  # Error: doble signo igual
+                  if helado["id"] == id_modificar:
+                    nuevo_nombre = input("Nuevo nombre (deje en blanco para no cambiar): ")  # Corregido doble signo igual
                     nueva_descripcion = input("Nueva descripción (deje en blanco para no cambiar): ")
                     nuevo_precio = input("Nuevo precio (deje en blanco para no cambiar): ")
                     
@@ -84,5 +84,5 @@ while True:
     elif opcion == "5":  # Salir
         print("Saliendo del programa...")
         break
-                else:
+    else:
         print("Opción inválida, intente nuevamente.")
